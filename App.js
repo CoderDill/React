@@ -1,8 +1,10 @@
 const App = () => (
   <div>
-    <RandNumRange min={22} max={58} />
-    <Mascot name="Jackson DeVille" jerseyNum={<RandomNum />} />
-    <RandomChoice choices={["teal", "black", "white"]} />
+    <Alert>
+      <RandNumRange min={22} max={58} />
+      <Mascot name="Jackson DeVille" jerseyNum={<RandomNum />} />
+      <RandomChoice choices={["teal", "black", "white"]} />
+    </Alert>
     <Jaguars />
     <JagsStadium />
     <Bouncer age={29} />
