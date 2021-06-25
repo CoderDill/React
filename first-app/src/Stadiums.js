@@ -8,7 +8,7 @@ const Stadiums = ({ NFLTeams }) => {
       {NFLTeams.map((team) => (
         <div className="Logos">
           <h2 id={team.name}>{team.name}</h2>
-          <Logos logo={team.logo} />
+          <Logos key={team.id } logo={team.logo} />
           <img src={team.img} alt="" />
           <ul>
             <li>Stadium: {team.stadium}</li>
