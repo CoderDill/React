@@ -1,11 +1,14 @@
 import React from "react";
+import Logos from "./Logos";
+import "./Logos.css";
 
 const Stadiums = ({ NFLTeams }) => {
   return (
     <div>
       {NFLTeams.map((team) => (
-        <div>
-          <h2>{team.name}</h2>
+        <div className="Logos">
+          <h2 id={team.name}>{team.name}</h2>
+          <Logos logo={team.logo} />
           <img src={team.img} alt="" />
           <ul>
             <li>Stadium: {team.stadium}</li>
