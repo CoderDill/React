@@ -12,7 +12,8 @@ test("query practice", () => {
 });
 
 test("should toggle", () => {
-  const { getByText } = render(<Greeting />);
+  const { getByText, debug } = render(<Greeting />);
+  debug();
   const heading = getByText("Hello,");
   expect(heading).toHaveClass("Greeting");
   expect(heading).toBeInTheDocument();
