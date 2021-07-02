@@ -22,7 +22,7 @@ const UserForm = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <lable htmlFor="username">Username</lable>
+      <label htmlFor="username">Username</label>
       <input
         id="username"
         type="text"
