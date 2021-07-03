@@ -1,4 +1,4 @@
-const Item = ({ id, name, qty }) => {
+const Item = ({ name, qty }) => {
   return (
     <ul>
       <li>Product Name: {name}</li>
