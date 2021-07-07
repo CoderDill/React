@@ -9,7 +9,7 @@ const Counter = () => {
 
   useEffect(() => {
     document.title = `Hi${"!".repeat(num)}`;
-  }, []);
+  }, [num]);
   return (
     <>
       Get excited!

@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
   useEffect(() => {
-    setInterval(() => {
+    const id = setInterval(() => {
       setSeconds((seconds) => seconds + 1);
     }, 1000);
+    return () => clearInterval(id);
   }, []);
   return <h1>{seconds}</h1>;
 };
