@@ -9,12 +9,19 @@ const ProfileViewerWithSearch = () => {
   const search = (term) => {
     setUrl(`https://api.github.com/users/${term}`);
   };
-  useEffect(() => {}, []);
-    return (
-    <>{profile ? <h2>{profile.name}</h2> : <h2>Loading...</h2>}
-            <ProfileSearchForm search={search}/>
-        </>
-    )
+  useEffect(() => {
+    async function loadProfile() {
+      const res = await axios.get(url);
+      setProfile(res.data);
+    }
+    loadProfile();
+  }, [url]);
+  return (
+    <>
+      {profile ? <h2>Hi, {profile.name}</h2> : <h2>Loading...</h2>}
+      <ProfileSearchForm search={search} />
+    </>
+  );
 };
 
 export default ProfileViewerWithSearch;

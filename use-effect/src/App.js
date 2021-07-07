@@ -1,6 +1,7 @@
 import Timer from "./Timer";
 import Counter from "./Counter";
 import ProfileViewer from "./ProfileViewer";
+import ProfileViewerWithSearch from "./ProfileViewerWithSearch";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <ProfileViewer name="Dillon" />
       <Counter />
       <Timer />
+      <ProfileViewerWithSearch />
     </div>
   );
 }
