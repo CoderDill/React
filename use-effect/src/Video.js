@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 function Video({
-  src = "https://media.giphy.com/media/r1jbtDXIAjq92/giphy.gif",
+  src = "https://media.giphy.com/media/cdNSp4L5vCU7aQrYnV/giphy.mp4",
 }) {
   const [speed, setSpeed] = useState(1);
   const videoRef = useRef();
@@ -10,7 +10,7 @@ function Video({
   }, [speed]);
   return (
     <div>
-      <video SameSite="None" muted autoPlay loop ref={videoRef}>
+      <video muted autoPlay loop ref={videoRef}>
         <source src={src} />
       </video>
       <div>
